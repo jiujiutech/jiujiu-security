@@ -1,0 +1,14 @@
+version: '2'
+services:
+  jiujiu-admin:
+    image: jiujiu/admin
+    ports:
+      - "8080:8080"
+    environment:
+      - spring.profiles.active=dev
+  jiujiu-api:
+    image: jiujiu/api
+    ports:
+      - "8081:8081"
+    environment:
+      - spring.profiles.active=dev
