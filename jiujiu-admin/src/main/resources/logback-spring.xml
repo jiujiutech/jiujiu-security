@@ -4,14 +4,14 @@
     <logger name="org.springframework.web" level="INFO"/>
     <logger name="org.springboot.sample" level="TRACE" />
 
-    <!-- 开发、测试环境 -->
+    <!-- Dev，Test -->
     <springProfile name="dev,test">
         <logger name="org.springframework.web" level="DEBUG"/>
         <logger name="org.springboot.sample" level="INFO" />
         <logger name="io.jiujiu" level="DEBUG" />
     </springProfile>
 
-    <!-- 生产环境 -->
+    <!-- Production -->
     <springProfile name="prod">
         <logger name="org.springframework.web" level="ERROR"/>
         <logger name="org.springboot.sample" level="ERROR" />
