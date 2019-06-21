@@ -65,7 +65,7 @@ public class ShiroUtils {
 	public static String getKaptcha(String key) {
 		Object kaptcha = getSessionAttribute(key);
 		if(kaptcha == null){
-			throw new RRException("验证码已失效");
+			throw new RRException("captcha out of date");
 		}
 		getSession().removeAttribute(key);
 		return kaptcha.toString();

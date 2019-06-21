@@ -28,7 +28,7 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 /**
- * 登录相关
+ * Login Controller
  *
  * @author Mark sunlightcs@gmail.com
  */
@@ -61,7 +61,7 @@ public class SysLoginController {
 	public R login(String username, String password, String captcha) {
 		String kaptcha = ShiroUtils.getKaptcha(Constants.KAPTCHA_SESSION_KEY);
 		if(!captcha.equalsIgnoreCase(kaptcha)){
-			return R.error("验证码不正确");
+			return R.error("Verification code incorrect");
 		}
 		
 		try{
@@ -71,11 +71,11 @@ public class SysLoginController {
 		}catch (UnknownAccountException e) {
 			return R.error(e.getMessage());
 		}catch (IncorrectCredentialsException e) {
-			return R.error("账号或密码不正确");
+			return R.error("account or password incorrect");
 		}catch (LockedAccountException e) {
-			return R.error("账号已被锁定,请联系管理员");
+			return R.error("account has been locked");
 		}catch (AuthenticationException e) {
-			return R.error("账户验证失败");
+			return R.error("account check fail");
 		}
 	    
 		return R.ok();
