@@ -114,7 +114,7 @@ jiujiu-security
 <br>
 
   **Project Demo**
-- Demo address: http://demo.open.jiujiu.io/jiujiu-security
+- Demo address: http://demo.security.i99tech.com/jiujiu-admin
 - Account password: admin/admin
 
 <br>
