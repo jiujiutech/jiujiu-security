@@ -1,9 +1,9 @@
 /**
- * Copyright (c) 2018 久久集团 All rights reserved.
+ * Copyright (c) 2018 99tech All rights reserved.
  *
  * https://i99tech.com
  *
- * 版权所有，侵权必究！
+ *
  */
 
 package io.jiujiu.commons.dynamic.datasource.annotation;

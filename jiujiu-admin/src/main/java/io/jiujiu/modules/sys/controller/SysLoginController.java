@@ -1,9 +1,9 @@
 /**
- * Copyright (c) 2016-2019 久久集团 All rights reserved.
+ * Copyright (c) 2016-2019 99tech All rights reserved.
  *
  * https://i99tech.com
  *
- * 版权所有，侵权必究！
+ *
  */
 
 package io.jiujiu.modules.sys.controller;

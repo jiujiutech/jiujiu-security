@@ -1,9 +1,9 @@
 /**
- * Copyright (c) 2016-2019 久久集团 All rights reserved.
+ * Copyright (c) 2016-2019 99tech All rights reserved.
  *
  * https://i99tech.com
  *
- * 版权所有，侵权必究！
+ *
  */
 
 package io.jiujiu.modules.sys.controller;
@@ -94,7 +94,7 @@ public class SysMenuController extends AbstractController {
 	/**
 	 * 保存
 	 */
-	@SysLog("保存菜单")
+	@SysLog("Save Menu")
 	@RequestMapping("/save")
 	@RequiresPermissions("sys:menu:save")
 	public R save(@RequestBody SysMenuEntity menu){
@@ -109,7 +109,7 @@ public class SysMenuController extends AbstractController {
 	/**
 	 * Update
 	 */
-	@SysLog("Update菜单")
+	@SysLog("Update Menu")
 	@RequestMapping("/update")
 	@RequiresPermissions("sys:menu:update")
 	public R update(@RequestBody SysMenuEntity menu){
@@ -124,7 +124,7 @@ public class SysMenuController extends AbstractController {
 	/**
 	 * Delete
 	 */
-	@SysLog("Delete菜单")
+	@SysLog("Delete Menu")
 	@RequestMapping("/delete")
 	@RequiresPermissions("sys:menu:delete")
 	public R delete(long menuId){

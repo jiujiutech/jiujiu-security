@@ -1,9 +1,9 @@
 /**
- * Copyright (c) 2016-2019 久久集团 All rights reserved.
+ * Copyright (c) 2016-2019 99tech All rights reserved.
  *
  * https://i99tech.com
  *
- * 版权所有，侵权必究！
+ *
  */
 
 package io.jiujiu.modules.sys.controller;
@@ -82,7 +82,7 @@ public class SysRoleController extends AbstractController {
 	/**
 	 * 保存角色
 	 */
-	@SysLog("保存角色")
+	@SysLog("Save Role")
 	@RequestMapping("/save")
 	@RequiresPermissions("sys:role:save")
 	public R save(@RequestBody SysRoleEntity role){
@@ -96,7 +96,7 @@ public class SysRoleController extends AbstractController {
 	/**
 	 * Update角色
 	 */
-	@SysLog("Update角色")
+	@SysLog("Update Role")
 	@RequestMapping("/update")
 	@RequiresPermissions("sys:role:update")
 	public R update(@RequestBody SysRoleEntity role){
@@ -110,7 +110,7 @@ public class SysRoleController extends AbstractController {
 	/**
 	 * Delete角色
 	 */
-	@SysLog("Delete角色")
+	@SysLog("Delete Role")
 	@RequestMapping("/delete")
 	@RequiresPermissions("sys:role:delete")
 	public R delete(@RequestBody Long[] roleIds){

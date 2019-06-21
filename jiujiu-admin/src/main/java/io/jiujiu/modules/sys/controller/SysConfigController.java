@@ -1,9 +1,9 @@
 /**
- * Copyright (c) 2016-2019 久久集团 All rights reserved.
+ * Copyright (c) 2016-2019 99tech All rights reserved.
  *
  * https://i99tech.com
  *
- * 版权所有，侵权必究！
+ *
  */
 
 package io.jiujiu.modules.sys.controller;
@@ -59,7 +59,7 @@ public class SysConfigController extends AbstractController {
 	/**
 	 * 保存配置
 	 */
-	@SysLog("保存配置")
+	@SysLog("Save Config")
 	@RequestMapping("/save")
 	@RequiresPermissions("sys:config:save")
 	public R save(@RequestBody SysConfigEntity config){
@@ -73,7 +73,7 @@ public class SysConfigController extends AbstractController {
 	/**
 	 * Update配置
 	 */
-	@SysLog("Update配置")
+	@SysLog("Update Config")
 	@RequestMapping("/update")
 	@RequiresPermissions("sys:config:update")
 	public R update(@RequestBody SysConfigEntity config){
@@ -87,7 +87,7 @@ public class SysConfigController extends AbstractController {
 	/**
 	 * Delete配置
 	 */
-	@SysLog("Delete配置")
+	@SysLog("Delete Config")
 	@RequestMapping("/delete")
 	@RequiresPermissions("sys:config:delete")
 	public R delete(@RequestBody Long[] ids){

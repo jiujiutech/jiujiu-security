@@ -1,9 +1,9 @@
 /**
- * Copyright (c) 2016-2019 久久集团 All rights reserved.
+ * Copyright (c) 2016-2019 99tech All rights reserved.
  *
  * https://i99tech.com
  *
- * 版权所有，侵权必究！
+ *
  */
 
 package io.jiujiu.modules.job.controller;
@@ -56,7 +56,7 @@ public class ScheduleJobController {
 	/**
 	 * 保存定时任务
 	 */
-	@SysLog("保存定时任务")
+	@SysLog("Save Timmer")
 	@RequestMapping("/save")
 	@RequiresPermissions("sys:schedule:save")
 	public R save(@RequestBody ScheduleJobEntity scheduleJob){
@@ -70,7 +70,7 @@ public class ScheduleJobController {
 	/**
 	 * Update定时任务
 	 */
-	@SysLog("Update定时任务")
+	@SysLog("Update Timmer")
 	@RequestMapping("/update")
 	@RequiresPermissions("sys:schedule:update")
 	public R update(@RequestBody ScheduleJobEntity scheduleJob){
@@ -84,7 +84,7 @@ public class ScheduleJobController {
 	/**
 	 * Delete定时任务
 	 */
-	@SysLog("Delete定时任务")
+	@SysLog("Delete Timmer")
 	@RequestMapping("/delete")
 	@RequiresPermissions("sys:schedule:delete")
 	public R delete(@RequestBody Long[] jobIds){
@@ -108,7 +108,7 @@ public class ScheduleJobController {
 	/**
 	 * 暂停定时任务
 	 */
-	@SysLog("暂停定时任务")
+	@SysLog("Pause Timmer")
 	@RequestMapping("/pause")
 	@RequiresPermissions("sys:schedule:pause")
 	public R pause(@RequestBody Long[] jobIds){
@@ -120,7 +120,7 @@ public class ScheduleJobController {
 	/**
 	 * 恢复定时任务
 	 */
-	@SysLog("恢复定时任务")
+	@SysLog("Resume Timmer")
 	@RequestMapping("/resume")
 	@RequiresPermissions("sys:schedule:resume")
 	public R resume(@RequestBody Long[] jobIds){

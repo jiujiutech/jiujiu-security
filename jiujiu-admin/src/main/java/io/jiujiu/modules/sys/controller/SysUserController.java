@@ -1,9 +1,9 @@
 /**
- * Copyright (c) 2016-2019 久久集团 All rights reserved.
+ * Copyright (c) 2016-2019 99tech All rights reserved.
  *
  * https://i99tech.com
  *
- * 版权所有，侵权必究！
+ *
  */
 
 package io.jiujiu.modules.sys.controller;
@@ -30,7 +30,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 系统用户
+ * Sys User Controller
  *
  * @author Mark sunlightcs@gmail.com
  */
@@ -54,7 +54,7 @@ public class SysUserController extends AbstractController {
 	}
 	
 	/**
-	 * 获取登录的用户信息
+	 * Get user info
 	 */
 	@RequestMapping("/info")
 	public R info(){
@@ -62,36 +62,35 @@ public class SysUserController extends AbstractController {
 	}
 	
 	/**
-	 * Update登录用户密码
+	 * Update login user password
 	 */
-	@SysLog("Update密码")
+	@SysLog("Update password")
 	@RequestMapping("/password")
 	public R password(String password, String newPassword){
-		Assert.isBlank(newPassword, "新密码不为能空");
-
-		//原密码
+		Assert.isBlank(newPassword, "New password can not be empty");
+		//old password
 		password = ShiroUtils.sha256(password, getUser().getSalt());
-		//新密码
+		//new password
 		newPassword = ShiroUtils.sha256(newPassword, getUser().getSalt());
 				
-		//更新密码
+		//update password
 		boolean flag = sysUserService.updatePassword(getUserId(), password, newPassword);
 		if(!flag){
-			return R.error("原密码不正确");
+			return R.error("old password is not correct");
 		}
 		
 		return R.ok();
 	}
 	
 	/**
-	 * 用户信息
+	 * user info
 	 */
 	@RequestMapping("/info/{userId}")
 	@RequiresPermissions("sys:user:info")
 	public R info(@PathVariable("userId") Long userId){
 		SysUserEntity user = sysUserService.getById(userId);
 		
-		//获取用户所属的角色列表
+		//get user role list
 		List<Long> roleIdList = sysUserRoleService.queryRoleIdList(userId);
 		user.setRoleIdList(roleIdList);
 		
@@ -99,9 +98,9 @@ public class SysUserController extends AbstractController {
 	}
 	
 	/**
-	 * 保存用户
+	 * save user
 	 */
-	@SysLog("保存用户")
+	@SysLog("Save User")
 	@RequestMapping("/save")
 	@RequiresPermissions("sys:user:save")
 	public R save(@RequestBody SysUserEntity user){
@@ -113,9 +112,9 @@ public class SysUserController extends AbstractController {
 	}
 	
 	/**
-	 * Update用户
+	 * Update user
 	 */
-	@SysLog("Update用户")
+	@SysLog("Update User")
 	@RequestMapping("/update")
 	@RequiresPermissions("sys:user:update")
 	public R update(@RequestBody SysUserEntity user){
@@ -127,18 +126,18 @@ public class SysUserController extends AbstractController {
 	}
 	
 	/**
-	 * Delete用户
+	 * Delete user
 	 */
-	@SysLog("Delete用户")
+	@SysLog("Delete User")
 	@RequestMapping("/delete")
 	@RequiresPermissions("sys:user:delete")
 	public R delete(@RequestBody Long[] userIds){
 		if(ArrayUtils.contains(userIds, 1L)){
-			return R.error("系统管理员不能Delete");
+			return R.error("Admin Can not be Deleted");
 		}
 		
 		if(ArrayUtils.contains(userIds, getUserId())){
-			return R.error("当前用户不能Delete");
+			return R.error("Current User Can not be Deleted");
 		}
 
 		sysUserService.removeByIds(Arrays.asList(userIds));
