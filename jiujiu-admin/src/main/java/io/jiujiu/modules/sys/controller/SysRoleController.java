@@ -68,11 +68,11 @@ public class SysRoleController extends AbstractController {
 	public R info(@PathVariable("roleId") Long roleId){
 		SysRoleEntity role = sysRoleService.getById(roleId);
 		
-		//查询角色对应的菜单
+		//Query角色对应的菜单
 		List<Long> menuIdList = sysRoleMenuService.queryMenuIdList(roleId);
 		role.setMenuIdList(menuIdList);
 
-		//查询角色对应的部门
+		//Query角色对应的部门
 		List<Long> deptIdList = sysRoleDeptService.queryDeptIdList(new Long[]{roleId});
 		role.setDeptIdList(deptIdList);
 		

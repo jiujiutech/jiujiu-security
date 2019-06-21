@@ -375,7 +375,7 @@ paths:
       tags:
         - 角色管理
       summary: 当前账号角色列表
-      description: 如果是超级管理员，则能查询所有的角色列表
+      description: 如果是超级管理员，则能Query所有的角色列表
       produces:
         - application/json
       responses:

@@ -22,7 +22,7 @@ public @interface DataFilter {
     /**  表的别名 */
     String tableAlias() default "";
 
-    /**  true：没有本部门数据权限，也能查询本人数据 */
+    /**  true：没有本部门数据权限，也能Query本人数据 */
     boolean user() default true;
 
     /**  true：拥有子部门数据权限 */

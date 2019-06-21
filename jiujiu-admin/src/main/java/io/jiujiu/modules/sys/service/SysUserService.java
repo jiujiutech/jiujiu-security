@@ -26,7 +26,7 @@ public interface SysUserService extends IService<SysUserEntity> {
 	PageUtils queryPage(Map<String, Object> params);
 	
 	/**
-	 * 查询用户的所有菜单ID
+	 * Query用户的所有菜单ID
 	 */
 	List<Long> queryAllMenuId(Long userId);
 	

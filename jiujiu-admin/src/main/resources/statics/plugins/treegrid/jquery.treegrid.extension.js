@@ -146,7 +146,7 @@
                         tbody.append(tr);
                         target.getChildNodes(data, item, (j + "_" + i), tbody);
                     });
-                    // 下边的操作主要是为了查询时让一些没有根节点的节点显示
+                    // 下边的操作主要是为了Query时让一些没有根节点的节点显示
                     $.each(data, function(i, item) {
                         if(!item.isShow){
                             var tr = $('<tr></tr>');

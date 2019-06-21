@@ -26,10 +26,10 @@
 **Project structure** 
 ```
 jiujiu-security
-├─jiujiu-common     common module
+├─jiujiu-common  common module
 │ 
-├─jiujiu-admin      Management console
-│    ├─db  DB SQL
+├─jiujiu-admin   Management console
+│    ├─db  SQL
 │    │ 
 │    ├─modules  modules
 │    │    ├─job Timed task
@@ -46,7 +46,7 @@ jiujiu-security
 │        └─application.yml   Global configuration file
 │       
 │ 
-├─jiujiu-api        API module
+├─jiujiu-api  API module
 │ 
 ├─jiujiu-generator  Code generator
 │        └─resources 

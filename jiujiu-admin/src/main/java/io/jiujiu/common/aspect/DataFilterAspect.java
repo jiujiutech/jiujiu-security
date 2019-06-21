@@ -101,7 +101,7 @@ public class DataFilterAspect {
             sqlFilter.append(tableAlias).append(dataFilter.deptId()).append(" in(").append(StringUtils.join(deptIdList, ",")).append(")");
         }
 
-        //没有本部门数据权限，也能查询本人数据
+        //没有本部门数据权限，也能Query本人数据
         if(dataFilter.user()){
             if(deptIdList.size() > 0){
                 sqlFilter.append(" or ");

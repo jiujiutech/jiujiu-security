@@ -83,7 +83,7 @@ public class UserRealm extends AuthorizingRealm {
 			AuthenticationToken authcToken) throws AuthenticationException {
 		UsernamePasswordToken token = (UsernamePasswordToken)authcToken;
 
-		//查询用户信息
+		//Query用户信息
 		SysUserEntity user = sysUserDao.selectOne(new QueryWrapper<SysUserEntity>().eq("username", token.getUsername()));
 		//账号不存在
 		if(user == null) {

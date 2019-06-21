@@ -23,7 +23,7 @@ import org.apache.ibatis.annotations.Param;
 public interface SysConfigDao extends BaseMapper<SysConfigEntity> {
 
 	/**
-	 * 根据key，查询value
+	 * 根据key，Queryvalue
 	 */
 	SysConfigEntity queryByKey(String paramKey);
 

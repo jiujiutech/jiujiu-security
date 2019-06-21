@@ -67,7 +67,7 @@ public class SysMenuController extends AbstractController {
 	@RequestMapping("/select")
 	@RequiresPermissions("sys:menu:select")
 	public R select(){
-		//查询列表数据
+		//Query列表数据
 		List<SysMenuEntity> menuList = sysMenuService.queryNotButtonList();
 		
 		//添加顶级菜单

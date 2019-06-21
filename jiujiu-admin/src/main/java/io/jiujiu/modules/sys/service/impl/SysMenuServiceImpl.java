@@ -81,7 +81,7 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuDao, SysMenuEntity> i
 	 * 获取所有菜单列表
 	 */
 	private List<SysMenuEntity> getAllMenuList(List<Long> menuIdList){
-		//查询根菜单列表
+		//Query根菜单列表
 		List<SysMenuEntity> menuList = queryListParentId(0L, menuIdList);
 		//递归获取子菜单
 		getMenuTreeList(menuList, menuIdList);

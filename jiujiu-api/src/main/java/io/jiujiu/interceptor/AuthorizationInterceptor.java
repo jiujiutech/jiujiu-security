@@ -59,7 +59,7 @@ public class AuthorizationInterceptor extends HandlerInterceptorAdapter {
             throw new RRException("token不能为空");
         }
 
-        //查询token信息
+        //Querytoken信息
         TokenEntity tokenEntity = tokenService.queryByToken(token);
         if(tokenEntity == null || tokenEntity.getExpireTime().getTime() < System.currentTimeMillis()){
             throw new RRException("token失效，请重新登录");
